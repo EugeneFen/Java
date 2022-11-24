@@ -1,16 +1,19 @@
 import static java.sql.Types.NULL;
 
+//класс массива
 public class Excepti  {
     private static int[] count; //массив цифр
-    static int size = 5;
-    Excepti()
+    static int size = 5; //размер массива
+    
+    Excepti() //конструктор
     {
-        count = new int[size];
-        for(int i = 0; i<size; i++)
+        count = new int[size]; //определение массива
+        for(int i = 0; i<size; i++) //обнуление ячеек массива
         {
             count[i] = NULL;
         }
-    } //определяет размер массива
+    }
+    //добавление элементов в массив
     public static void setAdd(int number) throws MasException //мотод с исключение (пожтому тот написано throws). MasException - класс (см. следующий файл)
     {
         int i = 0; //счетчик для хождения по масссиву
@@ -25,13 +28,11 @@ public class Excepti  {
         {
             System.out.println("Exception: "+e.toString1()); //выписывается сообщение
         }
-        //("Out of bounds 5");
-
     }
-
+    //удаление элемента
     public static void DelElement() throws MasException
     {
-        int i = 4;
+        int i = 4; //начинаем с конца
         try {
             while (count[i] == NULL ) { //ищем заполненую ячейку
                 i--;
@@ -43,21 +44,23 @@ public class Excepti  {
             System.out.println("Exception: "+e.toString2()); //выводим сообщение об ошибке
         }
     }
-
+    //поиск эл
     public static void Search(int num) throws MasException
     {
-        int i = 0;
+        int i = 0; //для хождения по массиву
         try {
-            if (count[1] == NULL) throw new MasException();
-            while (count[i] != num && i < size) i++;
-            if (count[i] == num) System.out.println("There is such an element. Index: " + i);
-            else if(i == size) System.out.println("No such element");
+            if (count[1] == NULL) throw new MasException(); //если массив оказался пуст, то выдаем ошибку
+            while (count[i] != num && i < size) i++; //пока не найдем элемент в массиве ИЛИ не дошли до конца
+            if (count[i] == num) System.out.println("There is such an element. Index: " + i); //если нашли эл, то выдаем сообщение
+            else if(i == size) System.out.println("No such element"); //если прошли весь массив, то выдаем сообщение
         }
         catch (MasException e) //создается обект исключения
         {
             System.out.println("Exception: "+e.toString3()); //выписывается сообщение
         }
     }
+    
+    //дальше идет код, для реализации без доп класса (или своего отдельного класса), но это не по заданию)
   /*  public void setAdd(int number)
     {
         try
