@@ -7,4 +7,8 @@ public class MasException extends Exception {
     {
         return ("Out of bounds array > 5");
     }
+    public String toString3()
+    {
+        return ("Array is empty");
+    }
 }
