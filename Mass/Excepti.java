@@ -2,11 +2,11 @@ import static java.sql.Types.NULL;
 
 public class Excepti  {
     private static int[] count; //массив цифр
-
+    static int size = 5;
     Excepti()
     {
-        count = new int[5];
-        for(int i = 0; i<5; i++)
+        count = new int[size];
+        for(int i = 0; i<size; i++)
         {
             count[i] = NULL;
         }
@@ -18,7 +18,7 @@ public class Excepti  {
         {
             while (count[i] != NULL ) { //ищем пустую ячейку
                 i++;
-                if (i >= 5) throw new MasException(); //если при поиске счетчик выодит за пределы массива, то кидается исключение
+                if (i >= size) throw new MasException(); //если при поиске счетчик выодит за пределы массива, то кидается исключение
             }
             count[i] = number; //если нашли пустое место, то заполняем его
         } catch (MasException e) //создается обект исключения
@@ -35,12 +35,27 @@ public class Excepti  {
         try {
             while (count[i] == NULL ) { //ищем заполненую ячейку
                 i--;
-                if (i <= 5) throw new MasException(); //если при поиске счетчик выодит за пределы массива, то кидается исключение
+                if (i <= size) throw new MasException(); //если при поиске счетчик выодит за пределы массива, то кидается исключение
             }
             count[i] = NULL; //если нашли заполненое место, то обнуляем его
         } catch (MasException e)
         {
             System.out.println("Exception: "+e.toString2()); //выводим сообщение об ошибке
+        }
+    }
+
+    public static void Search(int num) throws MasException
+    {
+        int i = 0;
+        try {
+            if (count[1] == NULL) throw new MasException();
+            while (count[i] != num && i < size) i++;
+            if (count[i] == num) System.out.println("There is such an element. Index: " + i);
+            else if(i == size) System.out.println("No such element");
+        }
+        catch (MasException e) //создается обект исключения
+        {
+            System.out.println("Exception: "+e.toString3()); //выписывается сообщение
         }
     }
   /*  public void setAdd(int number)
@@ -55,7 +70,6 @@ public class Excepti  {
         {
             System.out.println("Error: " + e.getMessage());
         }
-
     }
     public int getElement(int i)
     {
