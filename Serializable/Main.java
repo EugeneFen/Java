@@ -15,6 +15,6 @@ public class Main {
         System.out.println("Surname= "+ts1.surname);
         System.out.println("Year= "+ts1.year);
         System.out.println("Address= "+ts1.address);
-        System.out.println("Old= "+ts1.old);
+        System.out.println("Old= "+ts1.old); //вычилить возраст по году
     }
 }
