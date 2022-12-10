@@ -1,0 +1,14 @@
+https://metanit.com/java/database/2.1.php
+тут прописано как работать с базой данных
+
+https://dev.mysql.com/downloads/connector/j/?os=26
+по этой ссылке скачиваем нужный архив с новой "билиотекой"
+он нужен по инструкции (ссылка 1)
+
+https://javadevblog.com/kak-dobavit-biblioteku-jar-fajl-v-proekt-intellij-idea.html
+инструкция как добавить jar файл к проекту
+
+--------------------------------------------------------------------------------------------------------------
+Как использовать базу данных MySQL в Java:
+https://tproger.ru/translations/java-jdbc-example/
+
