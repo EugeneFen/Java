@@ -10,7 +10,9 @@ https://javadevblog.com/kak-dobavit-biblioteku-jar-fajl-v-proekt-intellij-idea.h
 
 https://wiki.gentoo.org/wiki/MySQL/Startup_Guide/ru#.D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0_.D0.91.D0.B0.D0.B7.D1.8B_.D0.94.D0.B0.D0.BD.D0.BD.D1.8B.D1.85
 как создать бау данных в MySql
-
+-
+-------------------------------------------------------------------------------------------------------------
+Логин от БД : root.
 --------------------------------------------------------------------------------------------------------------
 Как использовать базу данных MySQL в Java:
 https://tproger.ru/translations/java-jdbc-example/
